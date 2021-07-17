@@ -1,0 +1,18 @@
+<div class="spinner" *ngIf="loader.progress$|async" ></div>
+
+<ng-container>
+
+	<div id="m-app" class="page-wrapper">
+		<div class="page-header bg-grey-cararra">
+			<m-header></m-header>
+			<m-menu-horizontal *ngIf="_session.userId"></m-menu-horizontal>
+			<m-sidebar *ngIf="_session.userId"></m-sidebar>
+		</div>
+	
+		<div id="app-container">
+			<router-outlet></router-outlet>
+		</div>
+		<m-footer></m-footer>
+	</div>
+</ng-container>
+

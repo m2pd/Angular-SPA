@@ -1,0 +1,36 @@
+{
+  "remoteServiceBaseUrl": "http://localhost:5000",
+  "ssoRemoteServiceBaseUrl": "http://sso.api.nguyenthanhtruong.me:8081",
+  "cmsRemoteServiceBaseUrl": "http://cms.api.nguyenthanhtruong.me:8081",
+  "eduRemoteServiceBaseUrl": "http://edu.api.nguyenthanhtruong.me:8081",
+  "sysRemoteServiceBaseUrl": "http://sys.api.nguyenthanhtruong.me:8081",
+  "dataRemoteServiceBaseUrl": "http://data.api.nguyenthanhtruong.me:8081",
+  "loginUrl": "http://sso.nguyenthanhtruong.me:8081/v/login#http%3A%2F%2Flocalhost%3A4200%2Faccount%2Fset-token",
+  "appBaseUrl": "http://localhost:4200",
+  "signalrRemoteServiceBaseUrl": "",
+  "tenantProfile": {
+    "tenantName": "CỔNG THÔNG TIN ĐIỆN TỬ TRƯỜNG SĨ QUAN THÔNG TIN",
+    "hotline": "",
+    "tel": "069.756-351",
+    "fax": "0583-832-055",
+    "email": "info@tsqtt.edu.vn",
+    "address": "Số 101 Mai Xuân Thưởng, Nha Trang, Khánh Hòa",
+    "logo": "assets/theme/assets/media/logo/logo.png",
+    "website": "tsqtt.edu.vn",
+    "coQuanQuanLy": "Trường Sĩ Quan Thông Tin",
+    "note": "® Ghi rõ nguồn tsqtt.edu.vn khi phát hành lại thông tin từ cổng TTĐT Trường Sĩ Quan Thông Tin",
+    "id": 1
+  },
+  "listLanguage": [
+    {
+      "id": "vi-VI",
+      "name": "Tiếng việt",
+      "icon": ""
+    },
+    {
+      "id": "en-EN",
+      "name": "Tiếng anh",
+      "icon": ""
+    }
+  ]
+}

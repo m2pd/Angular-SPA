@@ -1,0 +1,9 @@
+<app-table-default [headers]="headers" [listData]="listData" (callBack)="abc($event)" [edit]="true" [listFilter]="listFilter"></app-table-default>
+
+<ng-template #abctemplate let-data="data" let-index="index">
+    {{ index }} sad sad
+</ng-template>
+
+<ng-template #childtemplate let-data="data" let-header="header" let-indexRow="indexRow">
+    <button class="btn btn-sm red" (click)="data.index =  502">aaaaaaaaaa</button>
+</ng-template>

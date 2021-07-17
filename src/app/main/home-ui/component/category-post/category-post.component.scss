@@ -1,0 +1,53 @@
+@import '../../../app.component.scss';
+
+.categories{
+  margin-bottom: 40px;
+
+  &.text-white{
+    h2, a{
+      color: #fff;
+    }
+
+    a{
+      &:hover{
+        color: #fcc133;
+      }
+    }
+  }
+}
+
+.h-title {
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.h-title h2 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 24px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: -1px;
+  padding-bottom: 8px;
+}
+.h-title h2:before {
+  content: "";
+  background: #dc2f27;
+  width: 94px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+a.read-more {
+  transition: 0.5s;
+  font-size: 12px;
+}
+a.read-more span {
+  margin-left: 6px;
+  letter-spacing: 3px;
+}

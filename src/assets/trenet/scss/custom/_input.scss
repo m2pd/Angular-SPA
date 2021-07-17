@@ -1,0 +1,104 @@
+m-text, m-number, m-select, m-textarea{
+    display: block;
+    margin-bottom: 10px;
+}
+
+// .form-group.form-md-line-input .input-group .input-group-addon{
+//     border-bottom: 1px dashed #9c9c9c;
+// }
+
+.form-group{
+    &.form-md-line-input {
+        margin: 0 !important;
+
+        .input-icon{
+            &.right{
+                .form-control{
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        .form-control {
+            // border-bottom: 1px dashed #9c9c9c;
+            // border-width: 0 0 1px 0;
+
+            padding-left: 15px;
+            // &.ng-invalid  {
+            //     ~.input-group-addon{
+            //         color: red;
+            //     }
+            //     color: red !important;
+
+            //     &::placeholder {
+            //         color: red !important;
+            //         opacity: 1; /* Firefox */
+            //     }
+        
+            //     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            //         color: red !important;
+            //     }
+        
+            //     &::-ms-input-placeholder { /* Microsoft Edge */
+            //         color: red !important;
+            //     }
+
+            //     &.form-control{
+            //         border-bottom: 1px dashed red !important;/* red */
+            //     }
+
+            //     &:focus{
+            //         &.form-control{
+            //             border-bottom: 2px solid red !important;
+
+            //             ~ label::after{
+            //                 background: red !important;
+            //             }
+            //         }
+            //     }
+            // }
+        }
+    }
+}
+
+// .ng-invalid:not(form)  {
+                
+//     .form-group{
+
+//         &.form-md-line-input{
+//             .form-control{
+                
+//                 color: red !important;
+
+//                 &::placeholder {
+//                     color: red !important;
+//                     opacity: 1; /* Firefox */
+//                 }
+        
+//                 &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+//                     color: red !important;
+//                 }
+        
+//                 &::-ms-input-placeholder { /* Microsoft Edge */
+//                     color: red !important;
+//                 }
+
+//                 border-bottom: 1px dashed red !important;/* red */
+
+//                 &:focus{
+//                     &.form-control{
+//                         border-bottom: 2px solid red !important;
+
+//                         ~ label::after{
+//                             background: red !important;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+app-notify-error{
+    display: block;
+}

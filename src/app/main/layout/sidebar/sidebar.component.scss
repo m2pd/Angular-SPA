@@ -1,0 +1,45 @@
+:host::ng-deep{
+    #menu-right{
+        ng-sidebar{
+            .ng-sidebar{
+                box-shadow: 0 2px 5px rgba(0,0,0,.5);
+                position: fixed !important;
+                background: white;
+                overflow-y: auto;
+
+              
+
+                .text-menu{
+                    cursor: pointer;
+                    border-bottom: 1px solid #d3d1d1;
+
+                    i, span{
+                        color: #666;
+                        font-size: 14px;
+                    }
+
+                    i{
+                        font-size: 16px;
+                    }
+                    &.active{
+                        i, span{
+                            color: #32C5D2;
+                        }
+                    }
+
+                    &:hover{
+                        i, span{
+                            color: #32C5D2;
+                        }
+                        background-color: #fdfbf7;
+                    }
+                }
+
+                @media (min-width:768px) {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+   
+}

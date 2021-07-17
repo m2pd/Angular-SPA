@@ -1,0 +1,31 @@
+<article class="item" [class.category-text__item]="post.type === 'time'"
+  [class.category-list__item]="post.typenpm === 'list'">
+
+  <ng-container *ngIf="post.type === 'time';else second">
+    <div class="category-text__time">
+      <p class="category-text__day">06</p>
+      <p class="category-text__month">Tháng 08</p>
+    </div>
+  </ng-container>
+  <ng-template #second>
+    <ng-container *ngIf="post.type === 'list';else third">
+      <!-- <a [title]="post.title" href="/danh-sach-hoc-lieu/bai-giang-giao-duc-quoc-phong-an-ninh">{{post.title}}</a> -->
+    </ng-container>
+  </ng-template>
+  <ng-template #third>
+    <div class="image">
+      <a href="./chi-tiet-bai-viet.html" [title]="post.title">
+        <img [src]="post.src" class="lazyload" alt="alt-post">
+      </a>
+    </div>
+  </ng-template>
+
+  <div class="title">
+    <h3>
+      <a href="./chi-tiet-bai-viet.html" [title]="post.title">
+        {{post.title}}
+      </a>
+    </h3>
+
+  </div>
+</article>

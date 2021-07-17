@@ -1,0 +1,33 @@
+<div id="menu-right">
+  <ng-sidebar-container >
+    <ng-sidebar [(opened)]="_opened" [mode]="'over'" 
+      [position]="'right'"
+      [closeOnClickOutside]="true" [closeOnClickBackdrop]="true"
+      [showBackdrop]="false" [animate]="true">
+  
+      <div class="sidebar-container padding-0 min-width-250">
+
+        <div class="display-block clearfix margin-t-5" >
+          <i class="mouse-hover fa fa-sign-out pull-right margin-r-8 font-size-20" style=" color: #32C5D2;" (click)="_menuConfig.switchMenuMobile()"></i>
+        </div>
+
+        <ng-container *ngFor="let menu of _menuConfig.listMenu">
+          <ng-container [ngTemplateOutlet]="m_menu" [ngTemplateOutletContext]="{ item: menu, toogle: true }"></ng-container>
+        </ng-container>
+      </div>
+  
+    </ng-sidebar>
+  </ng-sidebar-container>
+</div>
+
+
+<ng-template #m_menu let-item="item" let-toogle="toogle" >
+  <ng-container *ngIf="toogle">
+    <div class="padding-r-20 text-menu padding-tb-13 pointer padding-l-{{ (item.order - 1) * 20 + 20 }}" [ngClass]="{'active': item.active }" (click)="gotoView(item); item.toogle = !item.toogle">
+      <i class="margin-r-7 {{ item.icon }}"></i> <span> {{ item.name }}</span> <i *ngIf="item.listSub && item.listSub.length > 0" class="fa fa-angle-{{ item.toogle ? 'down' : 'left' }} pull-right line-height-20"></i>
+    </div>
+    <ng-container *ngFor="let sub of item.listSub" [ngTemplateOutlet]="m_menu" [ngTemplateOutletContext]="{ item: sub, toogle: item.toogle }"></ng-container>
+  
+  </ng-container>
+
+</ng-template>

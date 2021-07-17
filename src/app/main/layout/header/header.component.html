@@ -1,0 +1,89 @@
+<div class="page-header-top height-40 padding-lr-15 margin-tb-3">
+    <img width="40" height="40" class="pull-left" [attr.src]="urlLogo">
+    
+    <div class="pull-right line-height-40">
+        <ng-container *ngIf="_session.user; then has_login; else not_login"> </ng-container>
+        <span (click)="_menuConfig.switchMenuMobile()" class="menu-toggler margin-0 margin-r-5 margin-t-7 mouse-hover"></span>
+    </div>
+    
+</div>
+
+<ng-template #has_login>
+
+    <div class="margin-r-5 btn-group hidden-sm hidden-md hidden-lg">
+        <button class="btn green btn-sm dropdown-toggle width-150 three-dots" type="button" data-toggle="dropdown" aria-expanded="true"> 
+            <i class="fa fa-user"></i>
+            {{ _session.user.fullName }}
+            <!-- <i class="fa fa-angle-down"></i> -->
+        </button>
+        <!-- <ul class="dropdown-menu padding-t-0 margin-t-3 min-width-200 pull-right" role="menu">
+
+            <li class="bg-default bg-font-default">
+                <a class="bold padding-lr-10" href="javascript:;">Công ty</a>
+            </li>
+            <li *ngFor="let item of _session.user.listTenant" (click)="changeTenant(item)">
+                <a href="javascript:;" class="padding-l-20 padding-r-5"> {{ item.name }} <i class="font-green margin-t-1 fa fa-check pull-right" *ngIf="_session.user.tenant && _session.user.tenant.id == item.id"></i>   </a> 
+            </li>
+
+            <li class="bg-default bg-font-default">
+                <a class="bold padding-lr-10" href="javascript:;">Thông tin</a>
+            </li>
+
+            <li>
+                <a href="http://sso2.thongbao.net.vn/app/management/profile-user" class="padding-l-20 padding-r-5"> <i class="fa fa-info margin-r-12"></i>Cá nhân</a>
+            </li>
+            <li>
+                <a href="http://sso2.thongbao.net.vn/app/management/join-application" class="padding-l-20 padding-r-5"> <i class="fa fa-file-text margin-r-3"></i> Ứng dụng </a>
+            </li>
+            <li>
+                <a href="http://sso2.thongbao.net.vn/app/management/join-tenant" class="padding-l-20 padding-r-5"> <i class="fa fa-server margin-r-5"></i>Công ty </a>
+            </li>
+        </ul> -->
+    </div>
+
+    <!-- <div class="margin-r-5 btn-group hidden-xs">
+        <button class="btn btn-default btn-sm dropdown-toggle font-red min-width-80" type="button" data-toggle="dropdown" aria-expanded="true">
+            {{ _session.user.tenant ? _session.user.tenant.name : 'Tất cả' }}
+            <i class="fa fa-angle-down"></i>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li *ngFor="let item of _session.user.listTenant" (click)="changeTenant(item)">
+                <a href="javascript:;"> {{ item.name }} </a>
+            </li>
+        </ul>
+    </div> -->
+
+    <div class="margin-r-5 btn-group hidden-xs">
+        <button class="btn green btn-sm dropdown-toggle min-width-80" type="button" data-toggle="dropdown" aria-expanded="true"> 
+            <i class="fa fa-user"></i>
+            {{ _session.user.fullName }}
+            <!-- <i class="fa fa-angle-down"></i> -->
+        </button>
+        <!-- <ul class="dropdown-menu" role="menu">
+            <li>
+                <a href="http://sso2.thongbao.net.vn/app/management/profile-user"> <i class="fa fa-info margin-r-8"></i> Thông tin tài khoản </a>
+            </li>
+            <li>
+                <a href="http://sso2.thongbao.net.vn/app/management/join-application"> <i class="fa fa-file-text margin-r-3"></i> Danh sách ứng dụng </a>
+            </li>
+            <li>
+                <a href="http://sso2.thongbao.net.vn/app/management/join-tenant"> <i class="fa fa-server margin-r-2"></i> Danh sách công ty </a>
+            </li>
+        </ul> -->
+    </div>
+
+    <app-button
+        [classCssButton]="'btn-default min-width-80 hidden-xs'" 
+        [text]="'Thoát'" 
+        [iconAlign]="'right'"
+        [icon]="'margin-l-5 fa fa-sign-out'"
+        (callBack)="logout()"></app-button>
+ 
+    
+</ng-template>
+
+<ng-template #not_login>
+    <a href="javascript:;" class="margin-r-5 btn btn-sm btn-danger min-width-80" [attr.href]="urlLogin">  
+        Đăng nhập<i class="margin-l-5 fa fa-key"></i>
+    </a>
+</ng-template>

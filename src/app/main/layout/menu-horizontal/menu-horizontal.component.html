@@ -1,0 +1,35 @@
+<div id="m-menu-horizontal" class="page-header-menu">
+  <div class="container padding-0">
+    <div class="navbar-collapse collapse">
+      <div class="hor-menu">
+        <ul class="nav navbar-nav">
+          <ng-container *ngFor="let menu of _menuConfig.listMenu">
+            <ng-container [ngTemplateOutlet]="m_menu" [ngTemplateOutletContext]="{ item: menu, classCss: 'menu-dropdown classic-menu-dropdown' }"></ng-container>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- active opened -->
+<ng-template #m_menu let-item="item" let-classCss="classCss">
+  <li aria-haspopup="true" class="{{ classCss }} " [ngClass]="{'opened': item.toogle, 'active': item.active  }" >
+    <ng-container [ngTemplateOutlet]="m_content_menu" [ngTemplateOutletContext]="{ item: item }"></ng-container>
+  </li>
+</ng-template>
+
+<ng-template #m_content_menu let-item="item">
+  <a href="javascript:;" *ngIf="item.listSub && item.listSub.length > 0"
+    (click)="item.toogle = !item.toogle" >
+    <i class="fa fa-users"></i>
+    {{ item.name }}
+    <span class="arrow"></span>
+  </a>
+  <a href="javascript:;" [routerLink]="item.url" *ngIf="!item.listSub || item.listSub.length == 0"> <i class="{{item.icon}}" aria-hidden="true"></i> {{ item.name }}</a>
+
+  <ul class="dropdown-menu pull-left padding-0" *ngIf="item.listSub && item.listSub.length > 0">
+    <ng-container *ngFor="let child of item.listSub">
+        <ng-container [ngTemplateOutlet]="m_menu" [ngTemplateOutletContext]="{ item: child, classCss: child.listSub && child.listSub.length > 0 ? 'dropdown-submenu' : ''}"></ng-container>
+    </ng-container>
+  </ul>
+</ng-template>

@@ -1,0 +1,19 @@
+<!-- list post  -->
+<div class="categories" [class.text-white]="wapSection==='infomation'">
+  <div class="col-xs-12 col-md-4 col-lg-4">
+    <div class="d-flex h-title">
+      <div class="flex-grow-1">
+        <h2><span>{{category.name}}</span></h2>
+      </div>
+      <div class="align-self-center">
+        <a class="read-more" href="./danh-sach-bai-viet.html" title="">Xem thêm<span>[+]</span></a>
+      </div>
+    </div>
+    <div class="list-post">
+      <ng-container *ngFor="let post of category.posts">
+        <app-post-item [post]="post"></app-post-item>
+
+      </ng-container>
+    </div>
+  </div>
+</div>

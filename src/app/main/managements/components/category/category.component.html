@@ -1,0 +1,49 @@
+<div class="col-12 col-sm-12 title-action clearfix margin-b-10 margin-t-10">
+    <div class="title">
+        <h3> <i class="fa fa-list-ul" aria-hidden="true"></i>
+            Chuyên đề</h3>
+    </div>
+    <div class="body">
+        <app-table-default [headers]="headers" [listData]="list" (onAdd)="openDialog(null,null)"
+            (onEdit)="openDialog($event,null)"></app-table-default>
+    </div>
+</div>
+<ng-template #add_child_template let-data="data">
+    <button class="margin-r-0 btn btn-sm blue height-20 font-size-10 padding-0 padding-lr-5 position position-relative"
+        (click)="openDialog('',data.id)">
+        <span class="margin-r-5">Thêm chuyên đề con</span> <i class="fa fa-plus font-size-11"></i>
+    </button>
+</ng-template>
+<ng-template #tree_parent_template>
+    <div class="col-xs-9">
+        <div class="btn-group">
+            <div class="form-group form-md-line-input form-md-floating-label" data-toggle="dropdown"
+                aria-expanded="false">
+                <div class="input-group left-addon right-addon">
+                    <input type="text" class="form-control edited pointer" readonly="true"
+                        [attr.value]="_ut.findPick(list, 'id', form.value.parentId, 'name')" />
+                    <span class="input-group-addon">
+                        <i class="fa fa-angle-down margin-l-7 bold font-dark"></i>
+                    </span>
+                    <label class="padding-l-0 custom-title">Danh mục cha</label>
+                </div>
+            </div>
+            <ul class="dropdown-menu full-width max-height-300 overflow-auto-y">
+                <li (click)="form.get('parentId').setValue(null)">
+                    <a href="javascript:;" class="font-blue">
+                        Không chọn danh mục cha
+                    </a>
+                </li>
+                <ng-container *ngFor="let item of list">
+                    <li class="pointer" (click)="form.get('parentId').setValue(item.id)"
+                        *ngIf="item.id != form.value.id">
+                        <a href="javascript:;" class="padding-l-{{ (item.order - 1) * 30 + 10 }}">
+                            <i class="fa fa-sm margin-r-7"></i>
+                            {{ item.codeData }} - {{ item.name }}
+                        </a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</ng-template>

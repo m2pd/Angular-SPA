@@ -1,0 +1,146 @@
+<div>
+  <div class="container">
+    <div class="lotusui lotusHeader1">
+      <div class="lotusui lotusBanner">
+        <div class="linkId"><a href="" class="homeLink"></a></div>
+        <div class="colfix"></div>
+      </div>
+    </div>
+
+    <div id="navigation">
+      <div id="topMenu">
+        <ul class="dropdown">
+          <li class="selectedNode">
+            <a>
+              <div class="homeicon">
+                <span class="material-icons"> home </span>
+              </div>
+            </a>
+          </li>
+          <li *ngFor="let menu of menus">
+            <a>
+              <span>{{ menu.title }}</span>
+            </a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide *ngFor="let item of images">
+        <div class="picsum-img-wrapper">
+          <img [src]="item.url" alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.shortDescription }}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+    <div class="block menus">
+      <div class="menu">
+        <img alt="" src="http://daotao.mitechcenter.vn/assets/web/images/E-Learning-Icon.png" />
+        <span> Quản lý chỉ huy điều hành</span>
+      </div>
+      <div class="menu">
+        <img alt="" src="http://daotao.mitechcenter.vn/assets/web/images/cil_building.png" />
+        <span> Quản lý đào tạo</span>
+      </div>
+      <div class="menu">
+        <img alt="" src="http://daotao.mitechcenter.vn/assets/web/images/E-Learning-Icon.png" />
+        <span> Quản lý khảo thí</span>
+      </div>
+      <div class="menu">
+        <img alt="" src="http://daotao.mitechcenter.vn/assets/web/images/E-Learning-Icon.png" />
+        <span> Quản lý nghiên cứu khoa học</span>
+      </div>
+    </div>
+    <ng-container [ngTemplateOutlet]="categoryTemplate" [ngTemplateOutletContext]="{ category: categories[0] }">
+    </ng-container>
+    <ng-container [ngTemplateOutlet]="categoryTemplate" [ngTemplateOutletContext]="{ category: categories[1] }">
+    </ng-container>
+
+    <div class="block images">
+      <div class="block-content">
+        <div>
+          <img alt="" [src]="'assets/images/web/Banner 1.png'" />
+        </div>
+        <div>
+          <img alt="" [src]="'assets/images/web/banner-2-9.png'" />
+        </div>
+      </div>
+    </div>
+
+    <ng-container [ngTemplateOutlet]="categoryTemplate" [ngTemplateOutletContext]="{ category: categories[2] }">
+    </ng-container>
+    <div class="slider-with-links">
+      <div>
+        <i class="material-icons" (click)="prevImageClick()"> chevron_left </i>
+        <ng-image-slider #nav [images]="imageObject" [imageSize]="{ width: '200px', height: '60px' }"
+          [showArrow]="false" [infinite]="true" [autoSlide]="true" [imagePopup]="false" [animationSpeed]="3">
+        </ng-image-slider>
+        <i class="material-icons" (click)="nextImageClick()"> chevron_right </i>
+      </div>
+      <select>
+        <option value="volvo" selected>Liên kết website</option>
+      </select>
+    </div>
+
+    <ng-container [ngTemplateOutlet]="categoryTemplate" [ngTemplateOutletContext]="{ category: categories[0] }">
+    </ng-container>
+
+    <div class="block block1">
+      <div class="block-title" style="border: none">
+        <p>Thư viện hình ảnh</p>
+      </div>
+      <div class="block-content">
+        <div class="col-md-12">
+          <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <strong>CỔNG THÔNG TIN ĐIỆN TỬ TRƯỜNG SĨ QUAN THÔNG TIN</strong>
+    <br />
+    Địa chỉ: Số 101, Mai Xuân Thưởng, Nha Trang, Khánh Hòa * Tel: 069.756-315 *
+    Fax: 0583-832-055 * Email: info@tsqtt.edu.vn
+    <br />
+    Website: tsqtt.edu.vn * Cơ quan quản lý: Trường Sĩ Quan Thông Tin
+    <br /><span style="color: #999">® Ghi rõ nguồn <a class="txRed" href="#">tsqtt.edu.vn</a> khi phát hành
+      lại thông tin từ Cổng TTÐT Trường Sĩ Quan Thông Tin.
+    </span>
+  </div>
+</div>
+
+<ng-template #categoryTemplate let-category="category">
+  <div class="block block1">
+    <div class="block-title">
+      <p>{{ category.name }}</p>
+    </div>
+    <div class="block-content">
+      <div class="col-md-12">
+        <div class="col-md-6 even" *ngFor="let item of category.posts; let even = even; let odd = odd"
+          [class.even]="even" [class.odd]="odd">
+          <div class="img">
+            <img alt="" [src]="item.src" />
+          </div>
+          <div class="block-news">
+            <span>
+              {{ item.title }}
+            </span>
+            <p>
+              {{ item.shortDescription }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view-more">
+      Xem thêm <span class="material-icons"> arrow_forward_ios </span>
+    </div>
+  </div>
+</ng-template>

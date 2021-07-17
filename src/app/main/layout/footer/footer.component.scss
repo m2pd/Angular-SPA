@@ -1,0 +1,17 @@
+#m-footer{
+  background-color: #444D58;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.8em;
+  width: 100%;
+  .info {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.star {
+  display: inline-block;
+  margin: 0 3px;
+}

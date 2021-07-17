@@ -1,0 +1,35 @@
+<!-- begin::Footer -->
+<div id="m-footer" class="padding-lr-15 padding-tb-10">
+	<div class="tenant-name">
+		{{ tenantProfile?.tenantName }}
+	</div>
+	<div class="info display-flex flex-wrap">
+		<div class="info-item">Địa chỉ: {{ tenantProfile?.address }}</div>
+		<span class="star">*</span>
+		<div class="info-item">
+			Tel: {{ tenantProfile?.tel }}
+		</div>
+		<span class="star">*</span>
+		<div class="info-item">
+			Fax:<a class="font-white" href="javascript:;"> {{ tenantProfile?.email }}</a>
+		</div>
+		<span>*</span>
+		<div class="info-item">Email: {{ tenantProfile?.email }}</div>
+
+	</div>
+
+	<div class="info display-flex flex-wrap">
+		<div class="website">
+			Website: {{ tenantProfile?.website }}
+		</div>
+		<span class="star">*</span>
+		<div class="manager">
+			Website: {{ tenantProfile?.coQuanQuanLy }}
+		</div>
+	</div>
+
+	<div class="tenant-note">
+		{{ tenantProfile?.note }}
+	</div>
+</div>
+<!-- end::Footer -->

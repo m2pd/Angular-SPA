@@ -1,0 +1,310 @@
+<section class="connect-page">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slidersConfig">
+    <div ngxSlickItem *ngFor="let slide of imageSlides" class="slide">
+      <img src="{{ slide.image }}" alt="">
+    </div>
+  </ngx-slick-carousel>
+
+  <div class="container">
+    <div ngClass="connect-list">
+      <div *ngFor="let item of connectPage" class="connect-item">
+        <img class="img" src="{{ item.img }}" alt="1">
+        <p class="title">{{ item.title }}</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="article-post">
+  <div class="container">
+    <div class="article-post__wrapper">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6">
+          <div class="article-post__slide">
+            <div class="d-flex justify-content-between">
+              <h2 class="heading-featured m-0"><span>Tin nổi bật</span></h2>
+              <div class="align-self-center">
+                <a class="read-more" href="/chuyen-muc/" title="Tin nổi bật">Xem thêm<span>[+]</span></a>
+              </div>
+            </div>
+            <div class="article-new">
+              <div class="feedback-slides">
+                <div class="client-feedback">
+                  <ngx-slick-carousel class="carousel feedback" #slickModal="slick-carousel" [config]="imagesSlider">
+                    <div ngxSlickItem *ngFor="let slide of imageSlides" class="slide">
+                      <article class="slider-nav__anchor">
+                        <a href="/bai-viet/de-an-tuyen-sinh-nam-hoc-2021" title="Đề án tuyển sinh năm học 2021"
+                          tabindex="-1">
+                          <div class="image">
+                            <img src="{{ slide.image }}" alt="">
+                          </div>
+                          <div class="item-informations-container left-top">
+                            <h3 class="item-slide-title">
+                              Đề án tuyển sinh năm học 2021
+                            </h3>
+                          </div>
+                        </a>
+                      </article>
+                    </div>
+                  </ngx-slick-carousel>
+                </div>
+              </div>
+
+              <div class="client-thumbnails">
+                <ngx-slick-carousel class="carousel thumbs" #slickModal="slick-carousel" [config]="thumbnailsSlider ">
+                  <div ngxSlickItem *ngFor="let slide of imageSlides" class="slider">
+                    <div class="slider-nav__info" style="width: 100%; display: inline-block;">
+                      <span class="slider-nav__heading">{{slide.time.getUTCDate()}}</span>
+                      <span class="slider-nav__text">Tháng {{slide.time.getUTCMonth() + 1}}</span>
+                    </div>
+                  </div>
+                </ngx-slick-carousel>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6">
+          <div class="article-post__info">
+            <div class="d-flex justify-content-between">
+              <h2 class="heading-featured"><span>Tin tức &amp; sự kiện</span></h2>
+            </div>
+
+            <div class="article-feature">
+              <div class="feedback-slides">
+                <div class="client-feedback">
+                  <ngx-slick-carousel class="carousel feedback" #slickModal="slick-carousel"
+                    [config]="imagesSliderFeature">
+                    <div ngxSlickItem *ngFor="let slide of imageSlides" class="slide">
+                      <article class="item" style="width: 100%; display: inline-block;">
+                        <div class="image">
+                          <a href="/bai-viet/day-manh-chuyen-doi-so-linh-vuc-giao-duc-dao-tao-trong-he-thong-nha-truong-quan-doi"
+                            title="Đẩy mạnh chuyển đổi số lĩnh vực giáo dục, đào tạo trong hệ thống nhà trường quân đội"
+                            tabindex="-1">
+                            <img src="{{ slide.image }}"
+                              alt="Đẩy mạnh chuyển đổi số lĩnh vực giáo dục, đào tạo trong hệ thống nhà trường quân đội">
+                          </a>
+                        </div>
+                        <div class="description">
+                          <h3>
+                            <a href="/bai-viet/day-manh-chuyen-doi-so-linh-vuc-giao-duc-dao-tao-trong-he-thong-nha-truong-quan-doi"
+                              title="Đẩy mạnh chuyển đổi số lĩnh vực giáo dục, đào tạo trong hệ thống nhà trường quân đội"
+                              tabindex="-1">
+                              Đẩy mạnh chuyển đổi số lĩnh vực giáo dục, đào tạo trong hệ thống nhà trường quân đội
+                            </a>
+                          </h3>
+                          <span class="date"><i class="fa fa-clock"></i>03/04/2021</span>
+                          <span class="time">09:45</span>
+                          <p>
+                            QĐND– Sáng 11-3, tại Hà Nội, Tập đoàn Công nghiệp-Viễn thông Quân đội (Viettel) và Cục
+                            Nhà...
+                          </p>
+                        </div>
+                      </article>
+                    </div>
+                  </ngx-slick-carousel>
+                </div>
+              </div>
+
+              <div class="client-thumbnails">
+                <ngx-slick-carousel class="carousel thumbs" #slickModal="slick-carousel"
+                  [config]="thumbnailsSliderFeature ">
+                  <div ngxSlickItem *ngFor="let slide of imageSlides" class="slider">
+                    <article class="item" style="width: 100%; display: inline-block;">
+                      <div class="image">
+                        <a href="/bai-viet/chuyen-gia-an-do-gioi-thieu-chuyen-de-ve-cac-moi-hiem-hoa-nguy-co-mat-an-toan-thong-tin-hien-nay"
+                          title="Chuyên gia Ấn Độ giới thiệu chuyên đề về các mối hiểm họa, nguy cơ mất an toàn thông tin h..."
+                          tabindex="-1">
+                          <img src="{{ slide.image }}"
+                            alt="Chuyên gia Ấn Độ giới thiệu chuyên đề về các mối hiểm họa, nguy cơ mất an toàn thông tin hiện nay">
+                        </a>
+                      </div>
+                      <div class="title">
+                        <h3>
+                          <a href="/bai-viet/chuyen-gia-an-do-gioi-thieu-chuyen-de-ve-cac-moi-hiem-hoa-nguy-co-mat-an-toan-thong-tin-hien-nay"
+                            title="Chuyên gia Ấn Độ giới thiệu chuyên đề về các mối hiểm họa, nguy cơ mất an toàn thông tin hiện nay"
+                            tabindex="-1">
+                            Chuyên gia Ấn Độ giới thiệu chuyên đề về các mối hiểm họa, nguy cơ mất an toàn thông tin
+                            h...
+                          </a>
+                        </h3>
+                      </div>
+                    </article>
+                  </div>
+                </ngx-slick-carousel>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide *ngFor="let item of images">
+    <div class="picsum-img-wrapper">
+      <a [routerLink]="['/post', item.id]"><img [src]="item.value10" alt="Random first slide" /></a>
+    </div>
+    <div class="carousel-caption">
+      <h3>{{ item.value }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<!-- <div class="block menus">
+    <div class="menu">
+      <img alt="" src="assets/images/web/E-Learning-Icon.png" />
+      <span> Quản lý chỉ huy điều hành</span>
+    </div>
+    <div class="menu">
+      <img alt="" src="assets/images/web/cil_building.png" />
+      <span> Quản lý đào tạo</span>
+    </div>
+    <div class="menu">
+      <img alt="" src="assets/images/web/E-Learning-Icon.png" />
+      <span> Quản lý khảo thí</span>
+    </div>
+    <div class="menu">
+      <img alt="" src="assets/images/web/E-Learning-Icon.png" />
+      <a [routerLink]="'/app'"> <span> Quản lý nội dung</span> </a>
+    </div>
+  </div>
+  <ng-container *ngIf="categories.length" [ngTemplateOutlet]="categoryTemplate"
+    [ngTemplateOutletContext]="{ category: categories[0] }">
+  </ng-container>
+  <ng-container *ngIf="categories.length" [ngTemplateOutlet]="categoryTemplate"
+    [ngTemplateOutletContext]="{ category: categories[1] }">
+  </ng-container>
+
+  <div class="block images">
+    <div class="block-content">
+      <div>
+        <img alt="" [src]="'assets/images/web/Banner 1.png'" />
+      </div>
+      <div>
+        <img alt="" [src]="'assets/images/web/banner-2-9.png'" />
+      </div>
+    </div>
+  </div> -->
+
+<!-- <ng-container *ngIf="categories.length" [ngTemplateOutlet]="categoryTemplate"
+    [ngTemplateOutletContext]="{ category: categories[2] }">
+  </ng-container> -->
+<section class="information">
+  <div class="container">
+    <div class="categories-post">
+      <ng-container *ngFor="let category of categories">
+        <app-category-post [wapSection]="'infomation'" [category]="category">Loading</app-category-post>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<section class="section-news">
+  <div class="container">
+    <div class="banner">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6 group-banner">
+          <app-group-banner [imageSrc]="'assets/images/web/Banner 1.png'" [title]="'Đại hội Đảng'">
+          </app-group-banner>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6 group-banner">
+          <app-group-banner [imageSrc]="'assets/images/web/Banner-NamMoi.jpg'" [title]="'Chúc mừng năm mới'">
+          </app-group-banner>
+        </div>
+      </div>
+    </div>
+
+    <div class="categories-post">
+      <ng-container *ngFor="let category of categories">
+        <app-category-post [category]="category">Loading</app-category-post>
+      </ng-container>
+    </div>
+
+    <div class="banner">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6 group-banner">
+          <app-group-banner [imageSrc]="'assets/images/web/Banner 1.png'" [title]="'Đại hội Đảng'">
+          </app-group-banner>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6 group-banner">
+          <app-group-banner [imageSrc]="'assets/images/web/Banner-NamMoi.jpg'" [title]="'Chúc mừng năm mới'">
+          </app-group-banner>
+        </div>
+      </div>
+    </div>
+
+    <div class="categories-post">
+      <ng-container *ngFor="let category of categories">
+        <app-category-post [category]="category">Loading</app-category-post>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<section class="block block1">
+  <div class="container">
+    <div class="block-title" style="border: none">
+      <p>Thư viện hình ảnh</p>
+    </div>
+    <div class="block-content">
+      <div class="row">
+        <div class="col-md-12">
+          <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="slider-with-links">
+    <div>
+      <i class="material-icons" (click)="prevImageClick()"> chevron_left </i>
+      <ng-image-slider #nav [images]="imageObject" [imageSize]="{ width: '200px', height: '60px' }" [showArrow]="false"
+        [infinite]="true" [autoSlide]="true" [imagePopup]="false" [animationSpeed]="3"></ng-image-slider>
+      <i class="material-icons" (click)="nextImageClick()"> chevron_right </i>
+    </div>
+    <select>
+      <option value="volvo" selected>Liên kết website</option>
+    </select>
+  </div>
+
+</div>
+
+<ng-container *ngIf="categories.length" [ngTemplateOutlet]="categoryTemplate"
+  [ngTemplateOutletContext]="{ category: categories[3] }">
+</ng-container>
+
+
+<!-- <ng-template #categoryTemplate let-category="category">
+  <div class="block block1">
+    <div class="block-title">
+      <p>{{ category?.name }}</p>
+    </div>
+    <div class="block-content">
+      <div class="col-md-12">
+        <div class="col-md-6 even" *ngFor="let item of category?.posts; let even = even; let odd = odd"
+          [class.even]="even" [class.odd]="odd">
+          <div class="img">
+            <img alt="" [src]="item.value10 || 'assets/images/web/default_image.png'" />
+          </div>
+          <div class="block-news">
+            <span>
+              <a [routerLink]="['/post', item.id]">{{ item.name }}</a>
+            </span>
+            <p>
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view-more">
+      Xem thêm <span class="material-icons"> arrow_forward_ios </span>
+    </div>
+  </div>
+</ng-template> -->

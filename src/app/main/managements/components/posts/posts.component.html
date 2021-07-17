@@ -1,0 +1,45 @@
+<span class="font-size-20 bold col-xs-12 margin-tb-10"><i class="fa fa-file-text-o" aria-hidden="true"></i> Bài
+    viết</span>
+<app-table-default [listFilter]="listFilter" (onAdd)="preOpenDialog()" (onEdit)="preOpenDialog($event)"
+    class="col-xs-12" [headers]="headers" [trNextToTemplate]="content" [listData]="storagePost"></app-table-default>
+
+<ng-template #noiDungTemplate>
+    <div class="form-group col-12 col-md-12 col-lg-12">
+        <!--<label class="custom-title">Nội dung</label>-->
+        <div [ngxSummernote]="config" [formControl]="form.get('content')"></div>
+        <div class="input-group input-group-sm">
+            <app-files [formControl]="form.get('listFile')"></app-files>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #toggleButton let-data="data">
+    <div *ngIf="!data.isToggle">
+        <button
+            class="margin-r-0 btn btn-sm blue height-20 font-size-10 padding-0 padding-lr-5 position position-relative"
+            (click)="togglePost(data)" href="#collapseExample">
+            <span class="margin-r-5">Xem nội dung</span>
+            <i class="fa fa-eye font-size-11"></i>
+        </button>
+    </div>
+    <div *ngIf="data.isToggle">
+        <button
+            class="margin-r-0 btn btn-sm black height-20 font-size-10 padding-0 padding-lr-5 position position-relative"
+            (click)="togglePost(data)">
+            <span class="margin-r-5">Ẩn nội dụng</span>
+            <i class="fa fa-eye-slash font-size-11"></i>
+        </button>
+    </div>
+</ng-template>
+
+<ng-template #content let-data="data">
+    <tr *ngIf="data.isToggle">
+        <td colspan="9">
+            <div [innerHTML]="data.content">
+            </div>
+            <app-files [readonly]="true" [listFile]="data.listFile"></app-files>
+        </td>
+    </tr>
+</ng-template>
+
+<app-relationship></app-relationship>

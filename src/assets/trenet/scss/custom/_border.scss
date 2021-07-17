@@ -1,0 +1,175 @@
+$custom-border-color: #CCC;
+$custom-border-color-1: #999;
+$custom-border-color-2: #F0F0F0;
+$custom-border-color-3: #FFF;
+
+@for $i from 0 through 10 {
+
+    .border-radius-#{$i} {
+        border-radius: $i;
+    }
+
+    .border-radius-l-#{$i} {
+        border-bottom-left-radius: $i;
+        border-top-left-radius: $i;
+    }
+
+    .border-radius-r-#{$i} {
+        border-bottom-right-radius: $i;
+        border-top-right-radius: $i;
+    }
+
+    .border-radius-t-#{$i} {
+        border-top-left-radius: $i;
+        border-top-right-radius: $i;
+    }
+
+    .border-radius-b-#{$i} {
+        border-bottom-right-radius: $i;
+        border-bottom-left-radius: $i;
+    }
+
+    .border-s-#{$i} {
+        border-width: #{$i}px !important;
+    }
+
+    .border-s-t-#{$i} {
+        border-top-width: #{$i}px !important;
+    }
+
+    .border-s-b-#{$i} {
+        border-bottom-width: #{$i}px !important;
+    }
+
+    .border-s-l-#{$i} {
+        border-left-width: #{$i}px !important;
+    }
+
+    .border-s-r-#{$i} {
+        border-right-width: #{$i}px !important;
+    }
+}
+
+.border-a {
+    border: solid 1px $custom-border-color !important;
+
+    &.border-1 {
+        border-color: $custom-border-color-1 !important;
+    }
+
+    &.border-2 {
+        border-color: $custom-border-color-2 !important;
+    }
+
+    &.border-3 {
+        border-color: $custom-border-color-3 !important;
+    }
+}
+
+.border-tb {
+    border-top: solid 1px $custom-border-color !important;
+    border-bottom: solid 1px $custom-border-color !important;
+
+    &.border-1 {
+        border-top-color: $custom-border-color-1 !important;
+        border-bottom-color: $custom-border-color-1 !important;
+    }
+
+    &.border-2 {
+        border-top-color: $custom-border-color-2 !important;
+        border-bottom-color: $custom-border-color-2 !important;
+    }
+
+    &.border-3 {
+        border-top-color: $custom-border-color-3 !important;
+        border-bottom-color: $custom-border-color-3 !important;
+    }
+}
+
+.border-lr {
+    border-left: solid 1px $custom-border-color !important;
+    border-right: solid 1px $custom-border-color !important;
+
+    &.border-1 {
+        border-left-color: $custom-border-color-1 !important;
+        border-right-color: $custom-border-color-1 !important;
+    }
+
+    &.border-2 {
+        border-left-color: $custom-border-color-2 !important;
+        border-right-color: $custom-border-color-2 !important;
+    }
+
+    &.border-3 {
+        border-left-color: $custom-border-color-3 !important;
+        border-right-color: $custom-border-color-3 !important;
+    }
+}
+
+.border-t {
+    border-top: solid 1px $custom-border-color !important;
+
+    &.border-1 {
+        border-top-color: $custom-border-color-1 !important;
+    }
+
+    &.border-2 {
+        border-top-color: $custom-border-color-2 !important;
+    }
+
+    &.border-3 {
+        border-top-color: $custom-border-color-3 !important;
+    }
+}
+
+.border-b {
+    border-bottom: solid 1px $custom-border-color !important;
+
+    &.border-1 {
+        border-bottom-color: $custom-border-color-1 !important;
+    }
+
+    &.border-2 {
+        border-bottom-color: $custom-border-color-2 !important;
+    }
+
+    &.border-3 {
+        border-bottom-color: $custom-border-color-3 !important;
+    }
+}
+
+.border-l {
+    border-left: solid 1px $custom-border-color !important;
+
+    &.border-1 {
+        border-left-color: $custom-border-color-1 !important;
+    }
+
+    &.border-2 {
+        border-left-color: $custom-border-color-2 !important;
+    }
+
+    &.border-3 {
+        border-left-color: $custom-border-color-3 !important;
+    }
+}
+
+.border-r {
+    border-right: solid 1px $custom-border-color !important;
+
+    &.border-1 {
+        border-right-color: $custom-border-color-1 !important;
+    }
+
+    &.border-2 {
+        border-right-color: $custom-border-color-2 !important;
+    }
+
+    &.border-3 {
+        border-right-color: $custom-border-color-3 !important;
+    }
+}
+
+.border-a-n {
+    border: none !important;
+}

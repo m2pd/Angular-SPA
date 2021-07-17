@@ -1,0 +1,58 @@
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+	opacity: 0
+}
+
+.ant-time-picker-panel-input{
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-button {
+	//background-color: #CCC;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-button:decrement:start:vertical {
+    margin-top: 3px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%235a6268'><polygon points='0,7 10,7 5,0'/></svg>");
+}
+::-webkit-scrollbar-button:decrement:end:vertical {
+    display: none;
+}
+::-webkit-scrollbar-button:increment:start:vertical {
+    display: none;
+}
+::-webkit-scrollbar-button:increment:end:vertical {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%235a6268'><polygon points='0,0 10,0 5,8'/></svg>");
+}
+//-----------------------------------------------------------------------------
+::-webkit-scrollbar-button:decrement:start:horizontal {
+    margin-top: 3px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%235a6268'><polygon points='0,5 7,10 7,0'/></svg>");
+}
+::-webkit-scrollbar-button:decrement:end:horizontal {
+    display: none;
+}
+::-webkit-scrollbar-button:increment:start:horizontal {
+    display: none;
+}
+::-webkit-scrollbar-button:increment:end:horizontal {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%235a6268'><polygon points='0,0 8,5 0,10'/></svg>");
+}
+
+::-webkit-scrollbar-track-piece {
+    background: #FFF;
+}
+::-webkit-scrollbar-thumb {
+    background: #CCC;
+}​
+.acb{
+    color: red($color: #000000);
+}

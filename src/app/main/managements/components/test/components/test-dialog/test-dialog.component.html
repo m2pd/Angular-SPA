@@ -1,0 +1,6 @@
+<app-button (callBack)="openDialog()"  [text]="'test openDialog'"></app-button>
+
+<ng-template #child_template let-data="data">
+    {{ o }}
+    <app-button (callBack)="abc(data)" [key]="'add'"></app-button>
+</ng-template>

@@ -1,0 +1,36 @@
+.spinner {
+
+    position: fixed;
+	opacity: 0.3;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 999999;
+    background: rgba(249, 249, 249, 0.8);
+    
+    &:before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        width: 24px;
+        left: 50%;
+        border-radius: 50%;
+        border: 2px solid red;
+        border-right: 2px solid transparent;
+        height: 24px;
+        margin-left: -12px;
+    }
+    // Default Style
+    &:before {
+        animation: kt-spinner .5s linear infinite;
+    }
+
+}
+// Animations
+@keyframes kt-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}

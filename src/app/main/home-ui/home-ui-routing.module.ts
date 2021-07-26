@@ -1,3 +1,5 @@
+import { CategoryDocumentDetailComponent } from './category/category-document-detail/category-document-detail.component';
+import { CategoryDocumentComponent } from './category/category-document/category-document.component';
 import { CategoryTechnicalComponent } from './category/category-technical/category-technical.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
@@ -22,7 +24,14 @@ const routes: Routes = [
         path: "category-technical",
         component: CategoryTechnicalComponent
       },
-
+      {
+        path: "category-document",
+        component: CategoryDocumentComponent,
+      },
+      {
+        path: "category-document-detail/:id",
+        component: CategoryDocumentDetailComponent,
+       }
     ]
   }
 ];

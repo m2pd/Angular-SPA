@@ -1,0 +1,70 @@
+@import "../../../app.component.scss";
+@import "../../post-detail/post-detail.component.scss";
+
+.table{
+  margin-bottom: 0;
+}
+
+.list-lecture h1 {
+  font-size: 18px;
+  color: #dc2f27;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.list-lecture table {
+  border: none;
+  border-radius: 6px;
+  border-bottom: 3px solid #dc2f27 !important;
+}
+.list-lecture thead {
+  background-color: #dc2f27;
+  border-radius: 6px 6px 0 0;
+}
+.list-lecture thead tr {
+  border-radius: 6px;
+}
+.list-lecture thead th {
+  color: #fff;
+  font-weight: 400;
+  border-radius: 6px 6px 0 0;
+  border: none;
+  border-right: 1px solid #fff;
+  font-size: 14px;
+}
+.list-lecture thead th:last-child {
+  border-right: none;
+}
+.list-lecture tbody tr:nth-of-type(odd) {
+  background: #fff;
+}
+.list-lecture tbody tr:nth-of-type(even) {
+  background: #fdf1f1;
+}
+.list-lecture tbody tr td,
+.list-lecture tbody tr th {
+  border: none;
+  border-right: 1px solid #f4b2af;
+}
+.list-lecture tbody tr td:last-child,
+.list-lecture tbody tr th:last-child {
+  border-right: transparent;
+}
+.list-lecture h3,
+.list-lecture h6 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+}
+.list-lecture a {
+  transition: 0.5s;
+  color: #dc2f27;
+}
+.list-lecture a:hover {
+  color: #000;
+}
+.list-lecture th {
+  font-size: 13px;
+}

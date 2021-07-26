@@ -1,98 +1,59 @@
-<!-- <h3 class="title">{{ post?.name }}</h3>
-<div class="time">
-  <i class="material-icons"> watch_later </i>{{ post?.creationTime | date }}
-</div>
-<div [innerHTML]="post?.content"></div>
-
-<div class="list-news">
-  <div class="title">
-    <h2>Các bài viết khác</h2>
-  </div>
-
-  <ul>
-    <li class="nav-item" *ngFor="let item of relatedPosts">
-      <a [routerLink]="['/post', item.id]" [title]="item.name">{{
-        item.name
-      }}</a>
-    </li>
-  </ul>
-</div> -->
 <main>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-7 col-lg-9">
+      <div class="col-md-7 col-lg-9">
         <nav class="nav-breadcrumb pt-3">
           <ol class="breadcrumb">
             <li class="breadcrumb-item ">
-              <a href="index.html">Trang chủ</a>
+              <a href="./index.html">Trang chủ</a>
             </li>
             <li class="breadcrumb-item ">
-              <a href="danh-sach-bai-viet.html">Tin tức sự kiện</a>
+              <span>Giáo dục QPAN</span>
+            </li>
+            <li class="breadcrumb-item ">
+              <span>Học liệu QPAN</span>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="./danh-sach-hoc-lieu.html">Bài giảng</a>
             </li>
             <li class="breadcrumb-item active">
-              <span>Khai mạc khóa đào tạo kỹ năng đánh giá công tác bảo đảm an toàn thông tin...</span>
+              <span>Quan Điểm, Chủ Trương Của Đảng, Chính Sách...</span>
             </li>
           </ol>
         </nav>
-        <section class="single" id="detail">
-          <header>
-            <h1 class="title">Khai mạc khóa đào tạo kỹ năng đánh giá công tác bảo đảm an toàn thông tin tại
-              Trung tâm CNTT&NN</h1>
-            <div class="post-time d-flex">
-              <span class="date"><i class="fa fa-clock"></i>04/05/2020</span>
-              <span class="time">09:50</span>
-            </div>
-          </header>
+        <section class="lecture-item-content">
           <article>
-            <p>
-              Sáng 25/6/2020, Sở Thông tin và Truyền thông tỉnh Khánh Hòa phối hợp với Trung tâm Công nghệ
-              thông tin và ngoại ngữ - Trường Sĩ quan Thông tin tổ chức khai mạc khóa đào tạo kỹ năng đánh
-              giá công tác bảo đảm an toàn thông tin cho 50 cán bộ kỹ thuật là thành viên Đội Ứng cứu khẩn
-              cấp sự cố an toàn thông tin (ATTT) mạng tỉnh Khánh Hòa và cán bộ phụ trách công nghệ thông
-              tin (CNTT) của các cơ quan, đơn vị trên địa bàn tỉnh. Đến dự và phát biểu khai mạc có đồng
-              chí Nguyễn Tấn Trung – Phó Giám đốc Sở Thông tin và Truyền thông tỉnh Khánh Hòa. Tham dự có
-              đồng chí Đại tá Trần Văn Thuận – Giám đốc Trung tâm CNTT&NN cùng đông đủ học viên khóa học.
-            </p>
-            <figure class="text-center">
-              <img src="https://tcu.edu.vn/public/upload/Tlbbtpct/2021/3/Hthao%20(1).jpg" alt=" alt-image">
-              <figcaption>
-                Đồng chí Nguyễn Tấn Trung – Phó Giám đốc Sở TT&TT tỉnh Khánh Hòa phát biểu khai mạc
-              </figcaption>
-            </figure>
-            <figure class="text-center">
-              <img src="https://tcu.edu.vn/public/upload/Tlbbtpct/2021/3/Hthao%20(1).jpg" alt="alt-image">
-              <figcaption>
-                Đại tá Trần Văn Thuận – Giám đốc Trung tâm CNTT&NN phát biểu về công tác tổ chức, bảo
-                đảm khóa đào tạo
-              </figcaption>
-            </figure>
-            <p>
-              Trong những năm qua, tỉnh Khánh Hòa đã và đang nỗ lực đẩy mạnh ứng dụng CNTT trong hoạt động
-              của cơ quan Nhà nước. Cùng với đó, vấn đề bảo đảm ATTT đã và đang được các cấp, các ngành
-              quan tâm hàng đầu. Qua thực tế triển khai, Sở TT&TT nhận thấy công tác bảo đảm ATTT trên địa
-              bàn tỉnh hiện đang đối mặt với nhiều khó khăn, thử thách; một số ngành, địa phương đã xảy ra
-              các sự cố về an toàn thông tin, gây ảnh hưởng lớn đến công tác quản lý, điều hành của lãnh
-              đạo và hoạt động của các cơ quan, đơn vị.
-            </p>
-            <figure class="text-center">
-              <img src="https://tcu.edu.vn/public/upload/Tlbbtpct/2021/3/Hthao%20(1).jpg" alt="alt-image">
-              <figcaption>
-                Các học viên bước vào học tập sau khai mạc
-              </figcaption>
-            </figure>
-            <p>
-              Khóa đào tạo kỹ năng đánh giá công tác bảo đảm an toàn thông tin năm 2020 được tổ chức từ
-              ngày 25/6 đến ngày 27/6 do các giảng viên nhiều kinh nghiệm của Trung tâm CNTT&NN giảng dạy
-              nhằm trang bị cho các thành viên Đội Ứng cứu khẩn cấp sự cố ATTT mạng và cán bộ phụ trách
-              CNTT của các cơ quan, đơn vị trên địa bàn tỉnh những kiến thức, kỹ năng cần thiết về đánh
-              giá công tác bảo đảm an toàn thông tin, góp phần nâng cao chất lượng, hiệu quả công tác
-              trong thời gian tới. Chương trình khóa học được lồng ghép nội dung với theo dõi, học tập
-              kinh nghiệm từ cuộc diễn tập ứng phó sự cố ASIA 2020 và nghe doanh nghiệp giới thiệu về một
-              số giải pháp công nghệ mới (bằng hình thức trực tuyến).
-            </p>
-            <h5 class="author text-right">
-              Trường Sinh
-            </h5>
+            <header>
+              <h1 class="title">Quan Điểm, Chủ Trương Của Đảng, Chính Sách Pháp Luật Của Nhà Nước Về An
+                Ninh Quốc Gia Và Xây Dựng Thế Trận An Ninh Nhân Dân Trong Thời Kỳ Mới</h1>
+            </header>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <th>Mã tài liệu</th>
+                    <td><strong>BG001</strong></td>
+                  </tr>
+                  <tr>
+                    <th>Tên tài liệu</th>
+                    <td>Quan Điểm, Chủ Trương Của Đảng, Chính Sách Pháp Luật Của Nhà Nước Về An Ninh
+                      Quốc Gia Và Xây Dựng Thế Trận An Ninh Nhân Dân Trong Thời Kỳ Mới</td>
+                  </tr>
+                  <tr>
+                    <th>Tác giả</th>
+                    <td>Trần Xuân Ngọ</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="box-text">
+              <p>Xem nội dung <span>Bài Giảng</span> bên dưới, nhấn nút <i class="fas fa-file-download"></i> để tải
+                xuống tài liệu</p>
+            </div>
+            <!-- <iframe class="pdfembed"
+              src="https://tcu.edu.vn/assets/web/libs/pdfjs/web/viewer.html?file=/public/upload/Documents/Giao%20trinh/Giao%20trinh%20giao%20duc%20quoc%20phong-tap%201.pdf"
+              width="100%" height="720px"></iframe> -->
+            <iframe class="pdfembed" width="100%" height="720px" frameBorder="0" [src]="urlSafe"></iframe>
           </article>
         </section>
         <!-- <div class="list-social pt-3">
@@ -117,55 +78,8 @@
             </li>
           </ul>
         </div> -->
-        <div class="list-news">
-          <div class="title">
-            <h2>Các bài viết khác</h2>
-          </div>
-          <ul>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Trường Sĩ quan Thông tin tặng các trường học
-                trên địa bàn máy rửa tay sát khuẩn tự động</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Trường Sĩ quan Thông tin: Hoàn thành tốt nhiệm
-                vụ thực tập cuối khóa năm học 2019-2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Giảng viên Khoa Khoa học xã hội và nhân văn bảo
-                vệ luận văn thạc sĩ năm 2020 tại Học viện Chính trị</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Tích cực đưa Trung tâm Công nghệ thông tin và
-                Ngoại ngữ giai đoạn 2 vào hoạt động</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Trường Sĩ quan Thông tin: Hoàn thành tốt nhiệm
-                vụ thực tập cuối khóa năm học 2019-2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Đội SQ26 - TCU chiến thắng rực rỡ tại vòng bán
-                kết Cuộc thi Cuộc đua số khu vực miền Nam</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Giảng viên Khoa Khoa học xã hội và nhân văn bảo
-                vệ luận văn thạc sĩ năm 2020 tại Học viện Chính trị</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Đề án tuyển sinh Trường Sĩ quan Thông tin năm
-                2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Công bố phương thức tuyển sinh chính thức của
-                các trường quân đội năm 2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Bộ Quốc phòng điều chỉnh thời gian sơ tuyển vì
-                Covid-19</a>
-            </li>
-          </ul>
-        </div>
       </div>
-      <div class="col-xs-12 col-md-5 col-lg-3">
+      <div class="col-md-5 col-lg-3">
         <div class="sidebar pt-3">
           <aside class="banner">
             <ul class="intro__list">
@@ -423,8 +337,6 @@
             </div>
           </aside>
         </div>
-        <!-- <m-sidebar></m-sidebar> -->
-
       </div>
     </div>
   </div>

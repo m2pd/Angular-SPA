@@ -78,7 +78,7 @@
       </div>
     </div>
   </div>
-  <div id="navigation">
+  <!-- <div id="navigation">
     <div id="topMenu">
       <ul class="dropdown">
         <li class="selectedNode">
@@ -97,7 +97,119 @@
       </ul>
       <div class="clear"></div>
     </div>
-  </div>
+  </div> -->
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="#">Brand</a> -->
+        <a class="navbar-brand active" [routerLink]="'/home'">
+          <span class="material-icons"> home </span></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Giới thiệu <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Cơ cấu tổ chức</a></li>
+              <li><a class="dropdown-item" href="#">Giới thiệu nhà trường</a></li>
+              <li><a class="dropdown-item" href="#">Sứ mệnh tầm nhìn</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tin tức - Sự kiện</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Đào tạo <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Tin hoạt động</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Hoạt động đào tạo</a></li>
+                  <li><a class="dropdown-item" href="#">Hợp tác</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">Chương trình đào tạo</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Giáo dục QPAN<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Hoạt động giáo dục QPAN</a></li>
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Học liệu QPAN</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Giáo trình QPAN</a></li>
+                  <li><a class="dropdown-item" href="#">Bài giảng QPAN</a></li>
+                  <li><a class="dropdown-item" href="#">Văn bản quy phạm pháp luật</a></li>
+                  <li><a class="dropdown-item" href="#">Giáo án QPAN</a></li>
+                  <li><a class="dropdown-item" href="#">Tài liệu tham khảo</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Khoa học và công nghệ<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Tin KHCN</a></li>
+              <li><a class="dropdown-item" href="#">Sản phẩm KH&CN</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Tuyển sinh<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Hồ sơ tuyển sinh</a></li>
+              <li><a class="dropdown-item" href="#">Thông tin tuyển sinh</a></li>
+              <li><a class="dropdown-item" href="#">Giải đáp tuyển sinh</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Hội thảo - Hội nghị<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Đăng ký tham dự hội thảo</a></li>
+              <li><a class="dropdown-item" href="#">Tin hội thảo, hội nghị</a></li>
+              <li><a class="dropdown-item" href="#">Kết quả phản biện</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Liên hệ</a>
+          </li>
+        </ul>
+
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
 
 </header>

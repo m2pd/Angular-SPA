@@ -1,22 +1,3 @@
-<!-- <h3 class="title">{{ post?.name }}</h3>
-<div class="time">
-  <i class="material-icons"> watch_later </i>{{ post?.creationTime | date }}
-</div>
-<div [innerHTML]="post?.content"></div>
-
-<div class="list-news">
-  <div class="title">
-    <h2>Các bài viết khác</h2>
-  </div>
-
-  <ul>
-    <li class="nav-item" *ngFor="let item of relatedPosts">
-      <a [routerLink]="['/post', item.id]" [title]="item.name">{{
-        item.name
-      }}</a>
-    </li>
-  </ul>
-</div> -->
 <main>
   <div class="container">
     <div class="row">
@@ -27,143 +8,213 @@
               <a href="index.html">Trang chủ</a>
             </li>
             <li class="breadcrumb-item ">
-              <a href="danh-sach-bai-viet.html">Tin tức sự kiện</a>
+              <span>Giáo dục QPAN</span>
+            </li>
+            <li class="breadcrumb-item ">
+              <span>Học liệu QPAN</span>
             </li>
             <li class="breadcrumb-item active">
-              <span>Khai mạc khóa đào tạo kỹ năng đánh giá công tác bảo đảm an toàn thông tin...</span>
+              <span>Bài giảng</span>
             </li>
           </ol>
         </nav>
-        <section class="single" id="detail">
-          <header>
-            <h1 class="title">Khai mạc khóa đào tạo kỹ năng đánh giá công tác bảo đảm an toàn thông tin tại
-              Trung tâm CNTT&NN</h1>
-            <div class="post-time d-flex">
-              <span class="date"><i class="fa fa-clock"></i>04/05/2020</span>
-              <span class="time">09:50</span>
-            </div>
-          </header>
-          <article>
-            <p>
-              Sáng 25/6/2020, Sở Thông tin và Truyền thông tỉnh Khánh Hòa phối hợp với Trung tâm Công nghệ
-              thông tin và ngoại ngữ - Trường Sĩ quan Thông tin tổ chức khai mạc khóa đào tạo kỹ năng đánh
-              giá công tác bảo đảm an toàn thông tin cho 50 cán bộ kỹ thuật là thành viên Đội Ứng cứu khẩn
-              cấp sự cố an toàn thông tin (ATTT) mạng tỉnh Khánh Hòa và cán bộ phụ trách công nghệ thông
-              tin (CNTT) của các cơ quan, đơn vị trên địa bàn tỉnh. Đến dự và phát biểu khai mạc có đồng
-              chí Nguyễn Tấn Trung – Phó Giám đốc Sở Thông tin và Truyền thông tỉnh Khánh Hòa. Tham dự có
-              đồng chí Đại tá Trần Văn Thuận – Giám đốc Trung tâm CNTT&NN cùng đông đủ học viên khóa học.
-            </p>
-            <figure class="text-center">
-              <img src="https://tcu.edu.vn/public/upload/Tlbbtpct/2021/3/Hthao%20(1).jpg" alt=" alt-image">
-              <figcaption>
-                Đồng chí Nguyễn Tấn Trung – Phó Giám đốc Sở TT&TT tỉnh Khánh Hòa phát biểu khai mạc
-              </figcaption>
-            </figure>
-            <figure class="text-center">
-              <img src="https://tcu.edu.vn/public/upload/Tlbbtpct/2021/3/Hthao%20(1).jpg" alt="alt-image">
-              <figcaption>
-                Đại tá Trần Văn Thuận – Giám đốc Trung tâm CNTT&NN phát biểu về công tác tổ chức, bảo
-                đảm khóa đào tạo
-              </figcaption>
-            </figure>
-            <p>
-              Trong những năm qua, tỉnh Khánh Hòa đã và đang nỗ lực đẩy mạnh ứng dụng CNTT trong hoạt động
-              của cơ quan Nhà nước. Cùng với đó, vấn đề bảo đảm ATTT đã và đang được các cấp, các ngành
-              quan tâm hàng đầu. Qua thực tế triển khai, Sở TT&TT nhận thấy công tác bảo đảm ATTT trên địa
-              bàn tỉnh hiện đang đối mặt với nhiều khó khăn, thử thách; một số ngành, địa phương đã xảy ra
-              các sự cố về an toàn thông tin, gây ảnh hưởng lớn đến công tác quản lý, điều hành của lãnh
-              đạo và hoạt động của các cơ quan, đơn vị.
-            </p>
-            <figure class="text-center">
-              <img src="https://tcu.edu.vn/public/upload/Tlbbtpct/2021/3/Hthao%20(1).jpg" alt="alt-image">
-              <figcaption>
-                Các học viên bước vào học tập sau khai mạc
-              </figcaption>
-            </figure>
-            <p>
-              Khóa đào tạo kỹ năng đánh giá công tác bảo đảm an toàn thông tin năm 2020 được tổ chức từ
-              ngày 25/6 đến ngày 27/6 do các giảng viên nhiều kinh nghiệm của Trung tâm CNTT&NN giảng dạy
-              nhằm trang bị cho các thành viên Đội Ứng cứu khẩn cấp sự cố ATTT mạng và cán bộ phụ trách
-              CNTT của các cơ quan, đơn vị trên địa bàn tỉnh những kiến thức, kỹ năng cần thiết về đánh
-              giá công tác bảo đảm an toàn thông tin, góp phần nâng cao chất lượng, hiệu quả công tác
-              trong thời gian tới. Chương trình khóa học được lồng ghép nội dung với theo dõi, học tập
-              kinh nghiệm từ cuộc diễn tập ứng phó sự cố ASIA 2020 và nghe doanh nghiệp giới thiệu về một
-              số giải pháp công nghệ mới (bằng hình thức trực tuyến).
-            </p>
-            <h5 class="author text-right">
-              Trường Sinh
-            </h5>
-          </article>
-        </section>
-        <!-- <div class="list-social pt-3">
-          <ul>
-            <li class="item">
-              <a href="" class="back-link" title="Về trang trước">
-                <img src="./assets/web/images/ion_arrow-back-circle-outline.png" alt="alt-icon">
-                <span>Về trang trước</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="javascript:void(0)" id="share" title="Chia sẻ">
-                <img src="./assets/web/images/ant-design_share-alt-outlined.png" alt="alt-icon">
-                <span>Chia sẻ</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="javascript:void(0)" id="printnew" title="In Trang">
-                <img src="./assets/web/images/ion_print-outline.png" alt="alt-icon">
-                <span>In Trang</span>
-              </a>
-            </li>
-          </ul>
-        </div> -->
-        <div class="list-news">
+        <section class="list-lecture">
           <div class="title">
-            <h2>Các bài viết khác</h2>
+            <h1>Danh sách bài giảng Giáo dục quốc phòng an ninh</h1>
           </div>
-          <ul>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Trường Sĩ quan Thông tin tặng các trường học
-                trên địa bàn máy rửa tay sát khuẩn tự động</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Trường Sĩ quan Thông tin: Hoàn thành tốt nhiệm
-                vụ thực tập cuối khóa năm học 2019-2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Giảng viên Khoa Khoa học xã hội và nhân văn bảo
-                vệ luận văn thạc sĩ năm 2020 tại Học viện Chính trị</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Tích cực đưa Trung tâm Công nghệ thông tin và
-                Ngoại ngữ giai đoạn 2 vào hoạt động</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Trường Sĩ quan Thông tin: Hoàn thành tốt nhiệm
-                vụ thực tập cuối khóa năm học 2019-2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Đội SQ26 - TCU chiến thắng rực rỡ tại vòng bán
-                kết Cuộc thi Cuộc đua số khu vực miền Nam</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Giảng viên Khoa Khoa học xã hội và nhân văn bảo
-                vệ luận văn thạc sĩ năm 2020 tại Học viện Chính trị</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Đề án tuyển sinh Trường Sĩ quan Thông tin năm
-                2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Công bố phương thức tuyển sinh chính thức của
-                các trường quân đội năm 2020</a>
-            </li>
-            <li>
-              <a href="./chi-tiet-bai-viet.html" title="">Bộ Quốc phòng điều chỉnh thời gian sơ tuyển vì
-                Covid-19</a>
-            </li>
-          </ul>
-        </div>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th width="10%" scope="col" class="text-center">TT</th>
+                  <th width="15%" scope="col" class="text-center">Mã tài liệu</th>
+                  <th width="50%" scope="col" class="text-center">Tên tài liệu</th>
+                  <th width="25%" scope="col" class="text-center">Tác giả </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-center">1</th>
+                  <td class="text-center">
+                    <h6>
+                      BG001
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Quan Điểm, Chủ Trương Của Đảng, Chính Sách Pháp Luật Của Nhà Nước Về An Ninh Quốc Gia Và Xây
+                        Dựng Thế Trận An Ninh Nhân Dân Trong Thời Kỳ Mới
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Trần Xuân Ngọ</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center">2</th>
+                  <td class="text-center">
+                    <h6>
+                      BG002
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Quan Điểm, Chủ Trương Của Đảng Cộng Sản Việt Nam, Chính Sách Của Nhà Nước Về Dân Tộc, Tôn Giáo
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Nguyễn Hữu Phúc</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center">3</th>
+                  <td class="text-center">
+                    <h6>
+                      BG003
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Phát Triển Kinh Tế - Xã Hội Gắn Với Quốc Phòng - An Ninh
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Trần Xuân Ngọ</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center">4</th>
+                  <td class="text-center">
+                    <h6>
+                      BG004
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Quan Điểm, Chủ Trương Của Đảng Cộng Sản Việt Nam, Chính Sách Của Nhà Nước Về Đối Ngoại Gắn Với
+                        Quốc Phòng, An Ninh Trong Tình Hình Mới
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Đặng Công Thành</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center">5</th>
+                  <td class="text-center">
+                    <h6>
+                      BG005
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Quan Điểm Của Đảng, Nhà Nước Về Bảo Vệ An Ninh Chính Trị, Kinh Tế, Văn Hóa, Tư Tưởng Và Xây Dựng
+                        Phong Trào Toàn Dân Bảo Vệ An Ninh Tổ Quốc Trong Tình Hiện Nay
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Nguyễn Trường Thọ</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center">6</th>
+                  <td class="text-center">
+                    <h6>
+                      BG006
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Quan Điểm Của Chủ Nghĩa Mác – Lê Nin, Tư Tưởng Hồ Chí Minh Về Chiến Tranh Quân Đội Và Bảo Vệ Tổ
+                        Quốc
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Trần Xuân Ngọ</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center">7</th>
+                  <td class="text-center">
+                    <h6>
+                      BG007
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Những Vấn Đề Cơ Bản Về Bảo Vệ An Ninh Quốc Gia Và Giữ Gìn Trật Tự, An Toàn Xã Hội
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Trần Xuân Ngọ</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center">8</th>
+                  <td class="text-center">
+                    <h6>
+                      BG008
+                    </h6>
+                  </td>
+                  <td class="document-name">
+
+                    <h3>
+                      <a href="./chi-tiet-hoc-lieu.html" title="">
+                        Một Số Nội Dung Cơ Bản Về Dân Tộc, Tôn Giáo Và Đấu Tranh Phòng Chống Địch Lợi Dụng Vấn Đề Dân
+                        Tộc Và Tôn Giáo Chống Phá Cánh Mạng Việt Nam
+                      </a>
+                    </h3>
+                  </td>
+                  <td>
+                    <h6>Trần Xuân Ngọ</h6>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <nav class="pagination-wrap pt-3">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active"><span class="page-link">1</span></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </div>
       <div class="col-xs-12 col-md-5 col-lg-3">
         <div class="sidebar pt-3">
@@ -423,8 +474,6 @@
             </div>
           </aside>
         </div>
-        <!-- <m-sidebar></m-sidebar> -->
-
       </div>
     </div>
   </div>

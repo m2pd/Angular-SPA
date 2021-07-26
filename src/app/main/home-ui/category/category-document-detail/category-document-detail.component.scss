@@ -1,0 +1,28 @@
+@import "../../../app.component.scss";
+@import "../../post-detail/post-detail.component.scss";
+
+.lecture-item-content header h1 {
+  font-size: 16px;
+  color: #dc2f27;
+  line-height: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: initial;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lecture-item-content table th {
+  width: 20%;
+}
+
+.lecture-item-content table td, .lecture-item-content table th {
+  font-size: 14px;
+  line-height: 20px;
+}
+

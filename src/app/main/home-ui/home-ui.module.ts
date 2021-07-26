@@ -24,6 +24,9 @@ import { GroupBannerComponent } from './component/group-banner/group-banner.comp
 import { CountdownComponent } from './component/countdown/countdown.component';
 import { CategoryTechnicalComponent } from './category/category-technical/category-technical.component';
 import { CategoryTechnicalDetailComponent } from './category/category-technical-detail/category-technical-detail.component';
+import { CategoryDocumentComponent } from './category/category-document/category-document.component';
+import { CategoryDocumentDetailComponent } from './category/category-document-detail/category-document-detail.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -37,6 +40,9 @@ import { CategoryTechnicalDetailComponent } from './category/category-technical-
     CountdownComponent,
     CategoryTechnicalComponent,
     CategoryTechnicalDetailComponent,
+    CategoryDocumentComponent,
+    CategoryDocumentDetailComponent,
+    SidebarComponent,
     // SlickCarouselComponent
   ],
   imports: [

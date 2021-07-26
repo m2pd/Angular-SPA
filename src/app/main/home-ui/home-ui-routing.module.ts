@@ -1,3 +1,4 @@
+import { CategoryTechnicalComponent } from './category/category-technical/category-technical.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeUIComponent } from "./home-ui.component";
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: "post/:id",
         component: PostDetailComponent
+      },
+      {
+        path: "category-technical",
+        component: CategoryTechnicalComponent
       },
 
     ]

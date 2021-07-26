@@ -21,7 +21,9 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CategoryPostComponent } from './component/category-post/category-post.component';
 import { PostItemComponent } from './component/category-post/post-item/post-item.component';
 import { GroupBannerComponent } from './component/group-banner/group-banner.component';
-
+import { CountdownComponent } from './component/countdown/countdown.component';
+import { CategoryTechnicalComponent } from './category/category-technical/category-technical.component';
+import { CategoryTechnicalDetailComponent } from './category/category-technical-detail/category-technical-detail.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -32,6 +34,9 @@ import { GroupBannerComponent } from './component/group-banner/group-banner.comp
     CategoryPostComponent,
     PostItemComponent,
     GroupBannerComponent,
+    CountdownComponent,
+    CategoryTechnicalComponent,
+    CategoryTechnicalDetailComponent,
     // SlickCarouselComponent
   ],
   imports: [

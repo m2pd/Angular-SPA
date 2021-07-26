@@ -1,0 +1,29 @@
+.wrapper {
+  .times{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(70px, 1fr));
+    column-gap: 12px;
+
+    &-item{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      background: linear-gradient(192.29deg,#dc2f27 9.97%,#e66b43 65.84%,#efa25d 88.27%);
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin: 0 3px;
+
+      span{
+        font-family: Montserrat,sans-serif!important;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .time{
+        font-weight: bold;
+      }
+    }
+  }
+}
